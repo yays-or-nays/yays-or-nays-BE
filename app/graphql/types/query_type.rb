@@ -16,18 +16,18 @@ module Types
     end
 
     # # Tags
-    # field :tags, [Types::TagType], null:false
+    field :tags, [Types::TagType], null:false
 
-    # def tags
-    #   Tag.all
-    # end
+    def tags
+      Tag.all
+    end
 
-    # field :tag, Types::Tag, null: false do
-    #   argument :id, ID, required: true
-    # end
+    field :tag, Types::TagType, null: false do
+      argument :id, ID, required: true
+    end
 
-    # def tag(id:)
-    #   Tag.find(id)
-    # end
+    def tag(id:)
+      Tag.find(id)
+    end
   end
 end
