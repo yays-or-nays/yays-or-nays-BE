@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_09_222339) do
+ActiveRecord::Schema.define(version: 2021_04_09_225130) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,13 +22,8 @@ ActiveRecord::Schema.define(version: 2021_04_09_222339) do
     t.integer "no_vote", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "tagged_takes", force: :cascade do |t|
-    t.bigint "hot_take_id"
     t.bigint "tag_id"
-    t.index ["hot_take_id"], name: "index_tagged_takes_on_hot_take_id"
-    t.index ["tag_id"], name: "index_tagged_takes_on_tag_id"
+    t.index ["tag_id"], name: "index_hot_takes_on_tag_id"
   end
 
   create_table "tags", force: :cascade do |t|
@@ -37,6 +32,5 @@ ActiveRecord::Schema.define(version: 2021_04_09_222339) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "tagged_takes", "hot_takes"
-  add_foreign_key "tagged_takes", "tags"
+  add_foreign_key "hot_takes", "tags"
 end
