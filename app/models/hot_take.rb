@@ -1,0 +1,2 @@
+class HotTake < ApplicationRecord
+end
