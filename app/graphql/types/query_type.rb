@@ -4,7 +4,7 @@ module Types
     field :hot_takes, [Types::HotTakeType], null: false
 
     def hot_takes
-      HotTake.preload(:tags).all
+      HotTake.preload(:tag).all
     end
 
     field :hot_take, Types::HotTakeType, null: false do
