@@ -7,5 +7,6 @@ RSpec.describe HotTake, type: :model do
   describe 'Validations' do
     it { validate_presence_of :question }
     it { validate_presence_of :picture }
+    it { validate_presence_of :tag_id }
   end
 end
