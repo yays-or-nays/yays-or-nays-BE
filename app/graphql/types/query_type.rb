@@ -4,7 +4,7 @@ module Types
     field :hot_takes, [Types::HotTakeType], null: false
 
     def hot_takes
-      HotTake.preload(:tag).all
+      HotTake.all.to_a.sample(10)
     end
 
     field :hot_take, Types::HotTakeType, null: false do
@@ -15,7 +15,7 @@ module Types
       HotTake.find(id)
     end
 
-    # # Tags
+    # Tags
     field :tags, [Types::TagType], null:false
 
     def tags
@@ -23,11 +23,11 @@ module Types
     end
 
     field :tag, Types::TagType, null: false do
-      argument :id, ID, required: true
+      argument :category, String, required: true
     end
 
-    def tag(id:)
-      Tag.find(id)
+    def tag(category:)
+      Tag.find_by(category: category)
     end
   end
 end
