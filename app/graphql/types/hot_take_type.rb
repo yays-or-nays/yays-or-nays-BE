@@ -7,10 +7,13 @@ module Types
     field :no_vote, Integer, null: false
     field :tag_id, ID, null: false
     #field :tag, [Tag], null: false
-    field :tag, TagType.connection_type, null: false
+    field :tag, TagType, null: false
 
     # def yes_vote_count
     #   object.yes_vote
     # end
+    def tag
+      RecordLoader.for(Tag).load(object.tag_id)
+    end
   end
 end
