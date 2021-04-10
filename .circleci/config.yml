@@ -11,4 +11,4 @@ jobs:
       - checkout
       - run: gem install bundler
       - run: bundle install
-      
+      - run: bundle exec rails db:schema:load --trace
