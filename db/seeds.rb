@@ -20,6 +20,7 @@ software.hot_takes.create(picture: "1", question: "Javascript has too many unece
 software.hot_takes.create(picture: "1", question: "If you use VS Code and don't use the built in terminal it's weird", yes_vote: 1, no_vote: 1)
 
 food_tag.hot_takes.create(picture: "1", question: "IPAs taste like bile", yes_vote: 1)
+food_tag.hot_takes.create(picture: "1", question: "Boneless wings are better than bone-in wings", yes_vote: 2, no_vote: 3)
 food_tag.hot_takes.create(picture: "1", question: "Whiteclaw does the job and shouldnt be downplayed", yes_vote: 1)
 food_tag.hot_takes.create(picture: "1", question: "Connecticut is the pizza capital of the world", yes_vote: 2)
 food_tag.hot_takes.create(picture: "1", question: "Angel Hair is the worst pasta", yes_vote: 1, no_vote: 2)
