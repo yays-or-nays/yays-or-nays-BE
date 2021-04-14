@@ -12,12 +12,14 @@ gem 'puma', '~> 3.11'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.5'
 gem 'graphql', '1.9.18'
-gem 'graphql-batch'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-
+gem 'sass-rails'
+gem 'uglifier'
+gem 'coffee-rails'
+gem 'sprockets', '3.7.2'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
