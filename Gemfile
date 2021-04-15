@@ -16,10 +16,10 @@ gem 'graphql', '1.9.18'
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-gem 'sass-rails'
-gem 'uglifier'
-gem 'coffee-rails'
-gem 'sprockets', '3.7.2'
+# gem 'sass-rails'
+# gem 'uglifier'
+# gem 'coffee-rails'
+# gem 'sprockets', '3.7.2'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
