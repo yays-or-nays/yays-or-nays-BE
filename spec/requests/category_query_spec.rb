@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe 'receive fe request' do
-  it 'receive fe request for all categories & return response with all' do
+  xit 'receive fe request for all categories & return response with all' do
     # post "/graphql", params:'query{
     #                           tags{
     #                             category
