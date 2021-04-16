@@ -9,14 +9,9 @@ module Mutations
       hot_take = HotTake.find(id)
       hot_take_yes_vote = hot_take.yes_vote
       if hot_take.update!(yes_vote: hot_take_yes_vote + 1)
-        {
-          #hot_take: hot_take,
-          errors: []
-        }
+        { status: "Yes Vote incremented successfully" }
       else
-        {
-          errors: hot_take.errors.full_messages
-        }
+        { errors: hot_take.errors.full_messages }
       end
     end
   end
