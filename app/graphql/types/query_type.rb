@@ -1,10 +1,12 @@
 module Types
   class QueryType < Types::BaseObject
     # HotTakes
-    field :hot_takes, [Types::HotTakeType], null: false
+    field :hot_take_by_category, Types::HotTakeType, null: false do
+      argument :tag_id, Integer, required: true
+    end
 
-    def hot_takes
-      HotTake.all.to_a.sample(10)
+    def hot_take_by_category(tag_id:)
+      HotTake.where(tag_id: tag_id).to_a.sample#.hot_takes.sample
     end
 
     field :hot_take, Types::HotTakeType, null: false do
