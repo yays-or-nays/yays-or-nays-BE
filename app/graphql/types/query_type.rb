@@ -15,13 +15,5 @@ module Types
     def tags
       Tag.all
     end
-
-    field :tag, Types::TagType, null: false do
-      argument :category, String, required: true
-    end
-
-    def tag(category:)
-      Tag.find_by(category: category)
-    end
   end
 end
