@@ -9,14 +9,6 @@ module Types
       HotTake.where(tag_id: tag_id).to_a.sample#.hot_takes.sample
     end
 
-    field :hot_take, Types::HotTakeType, null: false do
-      argument :id, ID, required: true
-    end
-
-    def hot_take(id:)
-      HotTake.find(id)
-    end
-
     # Tags
     field :tags, [Types::TagType], null:false
 
