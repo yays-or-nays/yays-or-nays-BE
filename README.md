@@ -17,9 +17,22 @@
 
 <br/>
 
+## Installation/Local Setup
+To use this project in your local environment, please follow the instructions:
+
+  1. Clone the repository
+  2. `cd yays-or-nays-BE`
+  3. Install gem packes by running `bundler`. `bundle install` may not work due to Bundler version.
+  4. Create database by running `rails db:{create,migrate}`
+  5. Launch local server by running `rails s`
+  6. `PORT 3000` is being used, so send any requests to `http://localhost:3000/graphql` to fulfill any requests
+  7. To run tests and make sure everything is functioning as planned, please run `rspec` OR `bundle exec rspec`.
+
+Take note of Rails and Ruby version. `ruby '2.5.3'` and `rails 5.2.4.5`. If there are any issues, please change your environment to match these Ruby/Rails versions. If running any Bundler based commands is problematic, please change versions to bundler `2.1.4`.
+
 ## API Contract
 ### GraphQL Endpoint
-`https://yays-or-nays-be.herokuapp.com/graphql`
+Yays or Nays API is hosted on Heroku with the URL `https://yays-or-nays-be.herokuapp.com/`
 
 ### Queries
 
